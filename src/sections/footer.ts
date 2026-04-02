@@ -13,7 +13,7 @@ export default () => `
       <div class="social-links">
         ${socialLinks}
       </div>
-      <p>&copy; 2025 Fantasy World Adventures Mega Park. All rights reserved.</p>
+      <p>&copy; 2026 Fantasy World Adventures Mega Park. All rights reserved.</p>
     </div>
   </footer>
 `

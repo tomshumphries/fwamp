@@ -24,7 +24,6 @@ export default () => `
     <div class="container">
       <div class="section-heading">
         <h2>Videos</h2>
-        <p>FWAMP! fan favourites</p>
       </div>
       <div class="video-grid">
         ${videoClips}

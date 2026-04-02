@@ -2,7 +2,7 @@
 import photo1 from '../assets/images/photos/_MG_3014.JPG'
 import photo2 from '../assets/images/photos/_MG_3075.JPG'
 import photo3 from '../assets/images/photos/_MG_3180.JPG'
-import photo4 from '../assets/images/photos/_MG_3265.JPG'
+import photo4 from '../assets/images/photos/_MG_3412.JPG'
 import photo5 from '../assets/images/photos/_MG_3377.JPG'
 import photo6 from '../assets/images/photos/_MG_3508.JPG'
 import photo7 from '../assets/images/photos/_MG_3645.JPG'
@@ -34,7 +34,7 @@ export default () => `
         ${previewItems}
       </div>
       <div class="gallery-more">
-        <button class="btn btn-outline" id="gallery-view-all">View All ${allPhotos.length} Photos</button>
+        <button class="btn btn-outline" id="gallery-view-all">View All Photos</button>
       </div>
     </div>
   </section>

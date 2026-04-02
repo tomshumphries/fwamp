@@ -1,8 +1,10 @@
 import './style.css'
 import logoClean from './assets/images/logos/logo-clean.png'
+import copy from '../content/copy.json'
 
 import topbar from './sections/topbar'
 import hero from './sections/hero'
+import about from './sections/about'
 import trailer from './sections/trailer'
 import videos from './sections/videos'
 import gallery, { initGallery } from './sections/gallery'
@@ -14,6 +16,7 @@ import footer from './sections/footer'
 // Change this array to reorder sections on the page
 const sections = [
   { id: 'hero', label: 'Home', render: hero },
+  { id: 'about', label: 'About', render: about },
   { id: 'trailer', label: 'Trailer', render: trailer },
   { id: 'videos', label: 'Videos', render: videos },
   { id: 'gallery', label: 'Gallery', render: gallery },
@@ -40,6 +43,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     ${sectionHtml}
     ${footer()}
   </main>
+  <a class="mobile-cta" href="${copy.show.ticketUrl}" target="_blank" rel="noopener">Get Tickets &mdash; ${copy.show.ticketPrice}</a>
 `
 
 // Highlight active nav link on scroll

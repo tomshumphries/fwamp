@@ -1,3 +1,10 @@
+/*
+  Custom fonts — drop font files into src/assets/fonts/ and uncomment:
+  @font-face { font-family: 'Bobby Jones Soft'; src: url('./assets/fonts/bobby-jones-soft.woff2') format('woff2'); font-weight: normal; font-display: swap; }
+  @font-face { font-family: 'One Little Font'; src: url('./assets/fonts/one-little-font.woff2') format('woff2'); font-weight: normal; font-display: swap; }
+  @font-face { font-family: 'Gabriel Sans Condensed'; src: url('./assets/fonts/gabriel-sans-condensed.woff2') format('woff2'); font-weight: normal; font-display: swap; }
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +23,7 @@
   /* Functional tokens */
   --bg: linear-gradient(135deg, var(--yellow), var(--peach));
   --bg-solid: var(--yellow);
-  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card: rgba(255, 240, 220, 0.45);
   --bg-nav: var(--burgundy);
   --text: #3a2030;
   --text-muted: #6b4a5a;
@@ -26,9 +33,12 @@
   --border: rgba(128, 0, 78, 0.15);
   --nav-width: 200px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  /* Fonts — swap in brand fonts when available */
+  --font-heading: 'Bobby Jones Soft', 'Fredoka One', 'Baloo 2', system-ui, sans-serif;
+  --font-secondary: 'One Little Font', 'Patrick Hand', 'Comic Neue', system-ui, sans-serif;
+  --font-body: 'Gabriel Sans Condensed', system-ui, 'Segoe UI', Roboto, sans-serif;
 
-  font: 16px/1.6 var(--sans);
+  font: 16px/1.6 var(--font-body);
   color: var(--text);
   background: var(--bg);
   background-attachment: fixed;
@@ -274,6 +284,37 @@ section + section {
   flex-wrap: wrap;
 }
 
+/* About */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.about-block p {
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-block h3 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--burgundy);
+  margin-bottom: 12px;
+}
+
+.about-block .about-detail {
+  font-size: 14px;
+  color: var(--pink);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.about-cta {
+  text-align: center;
+}
+
 /* Section headings */
 .section-heading {
   text-align: center;
@@ -281,6 +322,7 @@ section + section {
 }
 
 .section-heading h2 {
+  font-family: var(--font-heading);
   font-size: 32px;
   font-weight: 700;
   color: var(--burgundy);
@@ -289,6 +331,7 @@ section + section {
 
 .section-heading p {
   color: var(--text-muted);
+  font-family: var(--font-secondary);
 }
 
 /* Trailer */
@@ -320,21 +363,24 @@ section + section {
 .video-card {
   border-radius: 12px;
   overflow: hidden;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 16px rgba(128, 0, 78, 0.08);
+  background: none;
+  border: none;
 }
 
 .video-title {
-  font-size: 16px;
+  font-family: var(--font-secondary);
+  font-size: 15px;
   font-weight: 600;
   color: var(--burgundy);
-  padding: 16px 20px 12px;
+  padding: 0 0 8px;
 }
 
 .video-embed {
   position: relative;
   padding-bottom: 56.25%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(128, 0, 78, 0.12);
 }
 
 .video-embed iframe {
@@ -449,11 +495,11 @@ section + section {
 }
 
 .review-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: var(--burgundy);
+  border: none;
   border-radius: 12px;
   padding: 28px;
-  box-shadow: 0 4px 16px rgba(128, 0, 78, 0.08);
+  box-shadow: 0 6px 24px rgba(128, 0, 78, 0.2);
 }
 
 .review-card .source {
@@ -470,12 +516,11 @@ section + section {
   font-size: 22px;
   letter-spacing: 2px;
   margin-bottom: 12px;
-  text-shadow: 0 1px 2px rgba(128, 0, 78, 0.2);
 }
 
 .review-card blockquote {
   font-style: italic;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.7;
   margin-bottom: 16px;
 }
@@ -483,7 +528,7 @@ section + section {
 .review-card .read-more {
   font-size: 14px;
   font-weight: 600;
-  color: var(--burgundy);
+  color: var(--yellow);
 }
 
 /* Venue */
@@ -544,12 +589,13 @@ section + section {
 }
 
 .support-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(255, 240, 220, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(128, 0, 78, 0.1);
   border-radius: 12px;
   padding: 32px;
   text-align: center;
-  box-shadow: 0 4px 16px rgba(128, 0, 78, 0.08);
+  box-shadow: 0 4px 20px rgba(128, 0, 78, 0.06);
 }
 
 .support-card h3 {
@@ -577,8 +623,8 @@ section + section {
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(255, 240, 220, 0.4);
+  border: 1px solid rgba(128, 0, 78, 0.1);
   border-radius: 8px;
   color: var(--burgundy);
   font-size: 14px;
@@ -605,8 +651,36 @@ footer .social-links {
   margin-bottom: 20px;
 }
 
+/* Mobile sticky CTA */
+.mobile-cta {
+  display: none;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
+  .mobile-cta {
+    display: flex;
+    position: fixed;
+    bottom: 48px;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    background: var(--pink);
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 0;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -4px 20px rgba(128, 0, 78, 0.3);
+  }
+
+  .mobile-cta:hover {
+    background: var(--burgundy);
+    color: var(--white);
+  }
   .side-nav {
     position: fixed;
     top: auto;
@@ -658,7 +732,7 @@ footer .social-links {
 
   .main-content {
     margin-left: 0;
-    padding-bottom: 56px;
+    padding-bottom: 100px;
   }
 
   section {
@@ -667,6 +741,11 @@ footer .social-links {
 
   .hero-logo {
     width: 200px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .venue-content {
