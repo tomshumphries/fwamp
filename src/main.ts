@@ -1,60 +1,66 @@
 import './style.css'
-import typescriptLogo from './assets/typescript.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import { setupCounter } from './counter.ts'
+import logoClean from './assets/images/logos/logo-clean.png'
+
+import topbar from './sections/topbar'
+import hero from './sections/hero'
+import trailer from './sections/trailer'
+import videos from './sections/videos'
+import gallery, { initGallery } from './sections/gallery'
+import reviews from './sections/reviews'
+import venue from './sections/venue'
+import support from './sections/support'
+import footer from './sections/footer'
+
+// Change this array to reorder sections on the page
+const sections = [
+  { id: 'hero', label: 'Home', render: hero },
+  { id: 'trailer', label: 'Trailer', render: trailer },
+  { id: 'videos', label: 'Videos', render: videos },
+  { id: 'gallery', label: 'Gallery', render: gallery },
+  { id: 'reviews', label: 'Reviews', render: reviews },
+  { id: 'venue', label: 'Venue', render: venue },
+  { id: 'support', label: 'Support', render: support },
+]
+
+const navItems = sections
+  .map((s) => `<li><a href="#${s.id}" class="nav-link" data-section="${s.id}">${s.label}</a></li>`)
+  .join('')
+
+const sectionHtml = sections.map((s) => s.render()).join('')
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-<section id="center">
-  <div class="hero">
-    <img src="${heroImg}" class="base" width="170" height="179">
-    <img src="${typescriptLogo}" class="framework" alt="TypeScript logo"/>
-    <img src=${viteLogo} class="vite" alt="Vite logo" />
-  </div>
-  <div>
-    <h1>Get started</h1>
-    <p>Edit <code>src/main.ts</code> and save to test <code>HMR</code></p>
-  </div>
-  <button id="counter" type="button" class="counter"></button>
-</section>
-
-<div class="ticks"></div>
-
-<section id="next-steps">
-  <div id="docs">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#documentation-icon"></use></svg>
-    <h2>Documentation</h2>
-    <p>Your questions, answered</p>
-    <ul>
-      <li>
-        <a href="https://vite.dev/" target="_blank">
-          <img class="logo" src=${viteLogo} alt="" />
-          Explore Vite
-        </a>
-      </li>
-      <li>
-        <a href="https://www.typescriptlang.org" target="_blank">
-          <img class="button-icon" src="${typescriptLogo}" alt="">
-          Learn more
-        </a>
-      </li>
+  <nav class="side-nav">
+    <div class="nav-logo"><img src="${logoClean}" alt="FWAMP" class="nav-logo-img" /></div>
+    <ul class="nav-links">
+      ${navItems}
     </ul>
-  </div>
-  <div id="social">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#social-icon"></use></svg>
-    <h2>Connect with us</h2>
-    <p>Join the Vite community</p>
-    <ul>
-      <li><a href="https://github.com/vitejs/vite" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>GitHub</a></li>
-      <li><a href="https://chat.vite.dev/" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Discord</a></li>
-      <li><a href="https://x.com/vite_js" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#x-icon"></use></svg>X.com</a></li>
-      <li><a href="https://bsky.app/profile/vite.dev" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#bluesky-icon"></use></svg>Bluesky</a></li>
-    </ul>
-  </div>
-</section>
-
-<div class="ticks"></div>
-<section id="spacer"></section>
+  </nav>
+  ${topbar()}
+  <main class="main-content">
+    ${sectionHtml}
+    ${footer()}
+  </main>
 `
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+// Highlight active nav link on scroll
+const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav-link')
+const sectionEls = sections.map((s) => document.getElementById(s.id)!).filter(Boolean)
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        navLinks.forEach((link) => link.classList.remove('active'))
+        const active = document.querySelector(`.nav-link[data-section="${entry.target.id}"]`)
+        active?.classList.add('active')
+      }
+    }
+  },
+  { rootMargin: '-40% 0px -60% 0px' }
+)
+
+for (const el of sectionEls) {
+  observer.observe(el)
+}
+
+initGallery()

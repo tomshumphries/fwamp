@@ -1,0 +1,78 @@
+{
+  "socials": [
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/fwampmusical",
+      "handle": "@fwampmusical"
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@fwampmusical",
+      "handle": "@fwampmusical"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://www.facebook.com/profile.php?id=61579575745218",
+      "handle": "FWAMP Musical"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/company/fantasy-world-adventures-mega-park-the-musical",
+      "handle": "Fantasy World Adventures Mega Park - The Musical"
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/@fwampmusical",
+      "handle": "@fwampmusical"
+    }
+  ],
+  "videos": {
+    "trailer": {
+      "title": "Official Trailer",
+      "url": "https://www.youtube.com/watch?v=vkdZRIwJro8",
+      "embedId": "vkdZRIwJro8"
+    },
+    "clips": [
+      {
+        "title": "Welcome to FWAMP",
+        "url": "https://www.youtube.com/watch?v=yCz0I5JPwVs",
+        "embedId": "yCz0I5JPwVs"
+      },
+      {
+        "title": "Let's Parade",
+        "url": "https://www.youtube.com/watch?v=ATBuzg77lgg",
+        "embedId": "ATBuzg77lgg"
+      },
+      {
+        "title": "Maintenance Men",
+        "url": "https://www.youtube.com/watch?v=TXXg3vRTQmE",
+        "embedId": "TXXg3vRTQmE"
+      },
+      {
+        "title": "Man of the Hour",
+        "url": "https://www.youtube.com/watch?v=acWhDN656tc",
+        "embedId": "acWhDN656tc"
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "source": "Fairy Powered Productions",
+      "url": "https://fairypoweredproductions.com/fantasy-world-adventures-mega-park-review/"
+    },
+    {
+      "source": "Leeds Living",
+      "url": "https://leedsliving.co.uk/art-culture/fantasy-world-adventures-mega-park-a-wonderous-rollercoaster-of-a-show/"
+    }
+  ],
+  "support": {
+    "gofundme": {
+      "title": "GoFundMe",
+      "url": "https://www.gofundme.com/f/fantasy-world-adventures-mega-park-to-fringe"
+    },
+    "sponsor": {
+      "title": "Become a Sponsor",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfNOhF8v9hN_iO0RKUOnZJ13PtPd16KYShXMpTjHvCLppBZqw/viewform"
+    }
+  }
+}
