@@ -86,18 +86,23 @@ img {
 
 .top-bar-socials {
   display: flex;
-  gap: 16px;
+  gap: 12px;
+  align-items: center;
 }
 
-.top-bar-socials a {
+.top-bar-social {
+  display: flex;
+  align-items: center;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.3px;
   transition: color 0.2s;
 }
 
-.top-bar-socials a:hover {
+.top-bar-social svg {
+  width: 16px;
+  height: 16px;
+}
+
+.top-bar-social:hover {
   color: var(--yellow);
 }
 

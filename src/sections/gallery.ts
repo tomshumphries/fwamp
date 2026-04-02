@@ -28,7 +28,7 @@ export default () => `
     <div class="container">
       <div class="section-heading">
         <h2>Gallery</h2>
-        <p>Photos from the show — Photography by Ella Fairley</p>
+        <p>Photography by Ella Fairley</p>
       </div>
       <div class="gallery-grid">
         ${previewItems}
