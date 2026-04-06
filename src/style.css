@@ -731,8 +731,26 @@ footer .social-links {
     left: 0;
   }
 
+  .top-bar-inner {
+    padding: 0 16px;
+  }
+
   .top-bar-socials {
-    display: none;
+    gap: 10px;
+  }
+
+  .top-bar-social svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .top-bar-btn {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .top-bar-tickets {
+    padding: 4px 10px;
   }
 
   .main-content {
@@ -741,11 +759,32 @@ footer .social-links {
   }
 
   section {
-    padding: 56px 0;
+    padding: 48px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2 {
+    font-size: 26px;
   }
 
   .hero-logo {
     width: 200px;
+  }
+
+  .hero .tagline {
+    font-size: 15px;
+  }
+
+  .hero .cta-row .btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .about-content {
@@ -753,20 +792,57 @@ footer .social-links {
     gap: 24px;
   }
 
-  .venue-content {
-    grid-template-columns: 1fr;
+  .trailer-wrapper {
+    border-radius: 8px;
   }
 
   .video-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .gallery-item img {
+    height: 160px;
   }
 
   .lightbox-grid {
     grid-template-columns: repeat(2, 1fr);
     padding: 16px;
+    gap: 10px;
+  }
+
+  .review-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .venue-content {
+    grid-template-columns: 1fr;
+  }
+
+  .venue-buttons {
+    flex-direction: column;
+  }
+
+  .venue-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .support-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .social-links {
+    gap: 8px;
+  }
+
+  .social-link {
+    padding: 8px 14px;
+    font-size: 13px;
   }
 }
