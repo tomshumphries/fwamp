@@ -5,11 +5,12 @@ import copy from '../content/copy.json'
 import topbar from './sections/topbar'
 import hero from './sections/hero'
 import about from './sections/about'
+import team from './sections/team'
 import trailer from './sections/trailer'
 import videos from './sections/videos'
 import gallery, { initGallery } from './sections/gallery'
 import reviews from './sections/reviews'
-import venue from './sections/venue'
+import venue, { initVenue } from './sections/venue'
 import support from './sections/support'
 import footer from './sections/footer'
 
@@ -17,6 +18,7 @@ import footer from './sections/footer'
 const sections = [
   { id: 'hero', label: 'Home', render: hero },
   { id: 'about', label: 'About', render: about },
+  { id: 'team', label: 'Team', render: team },
   { id: 'trailer', label: 'Trailer', render: trailer },
   { id: 'videos', label: 'Videos', render: videos },
   { id: 'gallery', label: 'Gallery', render: gallery },
@@ -68,3 +70,4 @@ for (const el of sectionEls) {
 }
 
 initGallery()
+initVenue()

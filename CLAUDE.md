@@ -25,11 +25,14 @@ fwamp/
 │   ├── assets/
 │   │   ├── images/
 │   │   │   ├── logos/          # logo-transparent.png, logo-clean.png, logo-full.png
-│   │   │   └── photos/        # 60 show photos (_MG_*.JPG)
+│   │   │   ├── photos/        # 60 show photos (_MG_*.JPG)
+│   │   │   └── team/          # Prod team headshots (name1.jpeg, name2.jpeg × 6 members)
 │   │   └── fonts/              # Custom fonts (if any)
 │   ├── sections/               # One file per page section (easy to reorder)
 │   │   ├── topbar.ts           # Sticky top bar (socials, donate, tickets)
 │   │   ├── hero.ts             # Logo, tagline, CTAs
+│   │   ├── about.ts            # Show description + company info
+│   │   ├── team.ts             # Prod team bios — 2-col polaroid card grid
 │   │   ├── trailer.ts          # Embedded YouTube trailer
 │   │   ├── videos.ts           # 2x2 grid of embedded song clips
 │   │   ├── gallery.ts          # 3x3 photo preview + "View All" lightbox (60 photos)

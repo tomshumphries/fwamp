@@ -290,30 +290,61 @@ section + section {
 }
 
 /* About */
-.about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+.about-synopsis {
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--text);
+  max-width: 780px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.about-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+
+.about-pill {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--burgundy);
+  color: var(--white);
+  letter-spacing: 0.3px;
+}
+
+.about-pill-warning {
+  background: transparent;
+  color: var(--burgundy);
+  border: 1.5px solid var(--burgundy);
+}
+
+.about-who {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px 40px;
   margin-bottom: 40px;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.about-block p {
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
-
-.about-block h3 {
+.about-who h3 {
   font-family: var(--font-heading);
   font-size: 22px;
   color: var(--burgundy);
   margin-bottom: 12px;
 }
 
-.about-block .about-detail {
-  font-size: 14px;
-  color: var(--pink);
-  font-weight: 600;
-  letter-spacing: 0.5px;
+.about-who p {
+  line-height: 1.8;
+  color: var(--text-muted);
 }
 
 .about-cta {
@@ -537,53 +568,191 @@ section + section {
 }
 
 /* Venue */
-.venue-content {
+.venue-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  align-items: start;
+  align-items: stretch;
 }
 
-.venue-info h3 {
+.venue-card {
+  background: rgba(255, 240, 220, 0.55);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(128, 0, 78, 0.06);
+}
+
+.venue-name {
+  font-family: var(--font-heading);
   font-size: 22px;
   color: var(--burgundy);
-  margin-bottom: 12px;
 }
 
-.venue-info .address {
+.venue-address {
   color: var(--text-muted);
-  margin-bottom: 8px;
-  line-height: 1.8;
+  line-height: 1.6;
+  font-size: 15px;
 }
 
-.venue-info .venue-dates {
-  color: var(--burgundy);
-  font-size: 17px;
-  margin-bottom: 4px;
-}
-
-.venue-info .venue-detail {
-  color: var(--text-muted);
-  font-size: 14px;
-}
-
-.venue-buttons {
+.venue-pills {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
+.venue-pill {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: var(--burgundy);
+  color: var(--white);
+  letter-spacing: 0.2px;
+}
+
 .venue-map {
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--border);
-  box-shadow: 0 4px 16px rgba(128, 0, 78, 0.08);
 }
 
 .venue-map iframe {
   width: 100%;
-  height: 300px;
+  height: 240px;
   border: none;
+  display: block;
+}
+
+.venue-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.venue-card-heading {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--burgundy);
+}
+
+.venue-plan-label {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: -4px;
+}
+
+.venue-hotels-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--burgundy);
+  margin-bottom: 8px;
+}
+
+.venue-hotel-btns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.venue-hotel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--burgundy);
+  color: var(--white);
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.venue-hotel-btn:hover {
+  background: var(--pink);
+  color: var(--white);
+}
+
+/* Calendar */
+.cal {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.cal-title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  color: var(--burgundy);
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.cal-head {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  padding-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  border-radius: 50%;
+  font-weight: 500;
+}
+
+.cal-empty {
+  pointer-events: none;
+}
+
+.cal-inactive {
+  color: rgba(58, 32, 48, 0.2);
+}
+
+.cal-show {
+  color: var(--burgundy);
+  font-weight: 700;
+  cursor: pointer;
+  border: 1.5px solid var(--burgundy);
+  background: transparent;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+}
+
+.cal-show:hover {
+  background: var(--burgundy);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.cal-show.cal-selected {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: var(--white);
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(255, 102, 196, 0.4);
+}
+
+
+.venue-plan-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 /* Support */
@@ -641,6 +810,100 @@ section + section {
   background: var(--burgundy);
   color: var(--white);
   border-color: var(--burgundy);
+}
+
+/* Team */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.team-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 0 4px 20px rgba(128, 0, 78, 0.06);
+  transition: box-shadow 0.3s;
+}
+
+.team-card:hover {
+  box-shadow: 0 8px 32px rgba(128, 0, 78, 0.14);
+}
+
+.team-photos {
+  position: relative;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.polaroid {
+  position: absolute;
+  background: #fff;
+  padding: 8px 8px 28px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  transition: transform 0.35s ease;
+}
+
+.polaroid img {
+  width: 140px;
+  height: 155px;
+  object-fit: cover;
+  display: block;
+}
+
+.polaroid-back {
+  transform: rotate(-7deg) translate(-62px, 6px);
+  z-index: 1;
+}
+
+.polaroid-front {
+  transform: rotate(6deg) translate(62px, -6px);
+  z-index: 2;
+}
+
+.team-card:hover .polaroid-front {
+  transform: rotate(10deg) translate(72px, -16px);
+}
+
+.team-card:hover .polaroid-back {
+  transform: rotate(-11deg) translate(-61px, 2px);
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.team-name {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--pink);
+  line-height: 1.2;
+}
+
+.team-role {
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--burgundy);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.team-bio {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-top: 4px;
 }
 
 /* Footer */
@@ -787,9 +1050,8 @@ footer .social-links {
     justify-content: center;
   }
 
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  .about-who {
+    padding: 24px 20px;
   }
 
   .trailer-wrapper {
@@ -820,8 +1082,9 @@ footer .social-links {
     grid-template-columns: 1fr;
   }
 
-  .venue-content {
+  .venue-layout {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .venue-buttons {
@@ -831,6 +1094,16 @@ footer .social-links {
   .venue-buttons .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .team-card {
+    padding: 24px 20px 20px;
+    gap: 20px;
   }
 
   .support-cards {

@@ -17,5 +17,49 @@
     "ticketPrice": "£12.00",
     "ticketUrl": "https://tickets.thespaceuk.com/event/911:6660/",
     "festival": "Edinburgh Festival Fringe 2026"
-  }
+  },
+  "team": [
+    {
+      "name": "Abbie Freeston",
+      "role": "Co-Creator, Director & Choreographer",
+      "bio": "Abbie is one of the FWAMP! creators, the director, choreographer, and founder of FWAMP! Theatre Company. She studied Theatre at University of Leeds and has since worked on a multitude of productions and events as a writer, director and performer. Credits include: FWAMP! (Leeds), Swan Song the Musical (Penge, London), Flashdance, A Chorus Line, Legally Blonde and Grease (Leeds). She is so excited to showcase the joy and craziness of FWAMP! to the world this summer.",
+      "photo1": "abbie1",
+      "photo2": "abbie2"
+    },
+    {
+      "name": "Matthew Stanley",
+      "role": "Co-Creator & Co-Musical Director",
+      "bio": "Matthew is a professional guitarist and Musical Director with recent touring credits including Guitar 1 on the UK premiere tour of 'The Rock and Roll Man' and Guitar 2 on 'The Percy Jackson Musical' UK Tour. Matthew was also recently the Orchestrator and Associate Musical Director for the critically acclaimed off West End run of 'Swan Song' (written by Zara Harris).",
+      "photo1": "matt1",
+      "photo2": "matt2"
+    },
+    {
+      "name": "Savannah Perry",
+      "role": "Producer",
+      "bio": "Savannah is a theatre producer and publicist from Cardiff and loves all things musical theatre. She has worked on a range of theatre productions, with previous credits including Swan Song: The Musical (London), Legally Blonde, Grease, Footloose (Leeds) and producing FWAMP!'s 2025 run. She is thrilled to be working on bringing the hilarious and wonderful world of Fantasy World Adventures Mega Park! to life at the Edinburgh Fringe.",
+      "photo1": "sav1",
+      "photo2": "sav2"
+    },
+    {
+      "name": "Zara Harris",
+      "role": "Co-Musical Director",
+      "bio": "Zara Harris is a composer, musical director and pianist. Recent work as an MD includes NewsRevue (Canal Cafe Theatre), Beauty and the Beast (The Bridge House Theatre) and Lost the Plot (the improvised musical). Zara wrote and composed the musical Swan Song which had successful runs in both Leeds and London. She is thrilled to be back with FWAMP! and is excited to see this new iteration of the show unfold!",
+      "photo1": "zara1",
+      "photo2": "zara2"
+    },
+    {
+      "name": "Mimi Roberts",
+      "role": "Assistant Musical Director",
+      "bio": "Mimi is a trained pianist and vocalist who's been involved in music and musical theatre for as long as she can remember. She recently graduated from the University of Leeds, although she has most recently MD-ed productions of Pippin (Cygnet Players), Flashdance and A Chorus Line (Leeds University Union) and is very excited to get away from the excel spreadsheets of her day job and instead enter the weird and wonderful world of FWAMP!",
+      "photo1": "mimi1",
+      "photo2": "mimi2"
+    },
+    {
+      "name": "Ella Fairley",
+      "role": "Vocal Coach & Publicity Officer",
+      "bio": "Ella is a recent graduate from the University of Leeds, where she studied Music. She is a classically trained singer with years of performance and teaching experience. Her recent performance and production team credits include: Grease, Legally Blonde: The Musical, A Chorus Line, Flashdance, Dogfight and High School Musical with Leeds University Union. She's super excited to join the FWAMP! team for the Fringe, and cannot wait to get started!",
+      "photo1": "ella1",
+      "photo2": "ella2"
+    }
+  ]
 }
