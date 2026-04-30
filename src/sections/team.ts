@@ -26,6 +26,12 @@ function memberCard(member: typeof copy.team[0]): string {
   `
 }
 
+export function initTeam() {
+  document.querySelectorAll<HTMLElement>('.team-photos').forEach(el => {
+    el.addEventListener('click', () => el.classList.toggle('swapped'))
+  })
+}
+
 export default () => `
   <section id="team">
     <div class="container">

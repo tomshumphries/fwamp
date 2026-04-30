@@ -37,17 +37,16 @@ export default () => `
         <button class="btn btn-outline" id="gallery-view-all">View All Photos</button>
       </div>
     </div>
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-header">
+        <span class="lightbox-title">All Photos (${allPhotos.length})</span>
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+      </div>
+      <div class="lightbox-grid">
+        ${allItems}
+      </div>
+    </div>
   </section>
-
-  <div class="lightbox" id="lightbox">
-    <div class="lightbox-header">
-      <span class="lightbox-title">All Photos (${allPhotos.length})</span>
-      <button class="lightbox-close" id="lightbox-close">&times;</button>
-    </div>
-    <div class="lightbox-grid">
-      ${allItems}
-    </div>
-  </div>
 `
 
 export function initGallery() {

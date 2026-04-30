@@ -5,10 +5,11 @@ import copy from '../content/copy.json'
 import topbar from './sections/topbar'
 import hero from './sections/hero'
 import about from './sections/about'
-import team from './sections/team'
+import team, { initTeam } from './sections/team'
 import trailer from './sections/trailer'
 import videos from './sections/videos'
 import gallery, { initGallery } from './sections/gallery'
+import { initScrollSnap } from './scroll'
 import reviews from './sections/reviews'
 import venue, { initVenue } from './sections/venue'
 import support from './sections/support'
@@ -71,3 +72,5 @@ for (const el of sectionEls) {
 
 initGallery()
 initVenue()
+initTeam()
+initScrollSnap()

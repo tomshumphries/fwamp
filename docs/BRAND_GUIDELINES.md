@@ -5,7 +5,6 @@
 | Role | Font |
 |------|------|
 | Primary (headings, logo) | Bobby Jones Soft |
-| Secondary | One Little Font |
 | Body / tertiary | Gabriel Sans Condensed |
 
 ## Colours

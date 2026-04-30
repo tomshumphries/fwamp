@@ -19,6 +19,19 @@ export default () => `
       <div class="top-bar-socials">
         ${socialIcons}
       </div>
+      <div class="top-bar-events">
+        <a href="#support" class="top-bar-event">
+          <span class="top-bar-event-date">22 May</span>
+          <span class="top-bar-event-dot">·</span>
+          <span class="top-bar-event-label">Fundraiser, Leeds</span>
+        </a>
+        <span class="top-bar-event-divider"></span>
+        <a href="#venue" class="top-bar-event">
+          <span class="top-bar-event-date">17–29 Aug</span>
+          <span class="top-bar-event-dot">·</span>
+          <span class="top-bar-event-label">Edinburgh Fringe</span>
+        </a>
+      </div>
       <div class="top-bar-actions">
         <a href="${links.support.gofundme.url}" target="_blank" rel="noopener" class="top-bar-btn">Donate</a>
         <a href="${links.support.sponsor.url}" target="_blank" rel="noopener" class="top-bar-btn">Sponsor</a>
