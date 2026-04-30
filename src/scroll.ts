@@ -1,4 +1,4 @@
-const LOCK_MS = 600  // ms cooldown between snaps
+const LOCK_MS = 100  // post-animation cooldown to absorb trackpad momentum
 
 export function initScrollSnap() {
   if (window.innerWidth <= 768) return
@@ -29,20 +29,13 @@ export function initScrollSnap() {
 
   window.addEventListener('scrollend', onAnimationEnd, { passive: true })
 
-  function snapTo(idx: number, scrollingUp: boolean) {
+  function snapTo(idx: number) {
     if (idx < 0 || idx >= sections.length) return
     lockedUntil = Date.now() + LOCK_MS
     targetIdx = idx
     isAnimating = true
 
-    const section = sections[idx]
-    const isTall = section.offsetHeight > window.innerHeight + 300
-
-    // Entering a tall section from below — land at its bottom so the user can scroll up through it
-    const top = isTall && scrollingUp
-      ? section.getBoundingClientRect().top + window.scrollY + section.offsetHeight - window.innerHeight
-      : section.getBoundingClientRect().top + window.scrollY - topbarHeight
-
+    const top = sections[idx].getBoundingClientRect().top + window.scrollY - topbarHeight
     window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' })
 
     if (fallbackTimer) clearTimeout(fallbackTimer)
@@ -51,21 +44,20 @@ export function initScrollSnap() {
 
   window.addEventListener('wheel', (e: WheelEvent) => {
     if (e.deltaY === 0) return
-
-    if (isAnimating) {
-      e.preventDefault()
-      return
-    }
-
-    const idx = getCurrentIndex()
-    const isTall = sections[idx].offsetHeight > window.innerHeight + 300
-
-    // Tall sections: let the browser handle scrolling naturally
-    if (isTall) return
-
-    // Page-size sections: snap
     e.preventDefault()
-    if (Date.now() < lockedUntil) return
-    snapTo(idx + (e.deltaY > 0 ? 1 : -1), e.deltaY < 0)
+    if (isAnimating || Date.now() < lockedUntil) return
+    snapTo(getCurrentIndex() + (e.deltaY > 0 ? 1 : -1))
   }, { passive: false })
+
+  window.addEventListener('keydown', (e: KeyboardEvent) => {
+    if (isAnimating || Date.now() < lockedUntil) return
+    const idx = getCurrentIndex()
+    if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+      e.preventDefault()
+      snapTo(idx + 1)
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      e.preventDefault()
+      snapTo(idx - 1)
+    }
+  })
 }
