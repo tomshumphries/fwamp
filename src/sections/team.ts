@@ -36,7 +36,7 @@ export default () => `
   <section id="team">
     <div class="container">
       <div class="section-heading">
-        <h2>Meet the Prod Team</h2>
+        <h2>Meet the Production Team</h2>
       </div>
       <div class="team-grid">
         ${copy.team.map(memberCard).join('')}
