@@ -1,7 +1,4 @@
 @font-face { font-family: 'Bobby Jones Soft'; src: url('./assets/fonts/bobby-jones-soft.otf') format('opentype'); font-weight: normal; font-display: swap; }
-@font-face { font-family: 'Gabriel Sans Condensed'; src: url('./assets/fonts/gabriel-sans-condensed-light.woff2') format('woff2'); font-weight: 300; font-display: swap; }
-@font-face { font-family: 'Gabriel Sans Condensed'; src: url('./assets/fonts/gabriel-sans-condensed.woff2') format('woff2'); font-weight: normal; font-display: swap; }
-@font-face { font-family: 'Gabriel Sans Condensed'; src: url('./assets/fonts/gabriel-sans-condensed-bold.woff2') format('woff2'); font-weight: bold; font-display: swap; }
 
 * {
   margin: 0;
@@ -38,8 +35,8 @@ html {
 
   /* Fonts — swap in brand fonts when available */
   --font-heading: 'Bobby Jones Soft', 'Fredoka One', 'Baloo 2', system-ui, sans-serif;
-  --font-secondary: 'Patrick Hand', 'Comic Neue', system-ui, sans-serif;
-  --font-body: 'Gabriel Sans Condensed', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-secondary: 'Bobby Jones Soft', 'Fredoka One', 'Baloo 2', system-ui, sans-serif;
+  --font-body: 'Bobby Jones Soft', 'Fredoka One', 'Baloo 2', system-ui, sans-serif;
 
   font: 20px/1.6 var(--font-body);
   color: var(--text);
