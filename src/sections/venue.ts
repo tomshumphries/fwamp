@@ -1,11 +1,12 @@
 import copy from '../../content/copy.json'
+import links from '../../content/links.json'
 
 function buildCalendar(): string {
   const dayHeaders = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su']
     .map(d => `<span class="cal-head">${d}</span>`)
     .join('')
 
-  // Aug 17 (Mon) → Aug 30 (Sun): exactly 2 clean rows, no offset needed
+  // Aug 17 (Mon) → Aug 30 (Sun): 2 clean rows, Aug 30 included for hotel checkout
   const days: string[] = []
   for (let d = 17; d <= 30; d++) {
     const dateStr = `2026-08-${String(d).padStart(2, '0')}`
@@ -40,7 +41,7 @@ export default () => `
           </div>
           <div class="venue-map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.0!2d-3.1883!3d55.9505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDU3JzAxLjgiTiAzwrAxMScxNy45Ilc!5e0!3m2!1sen!2suk!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.8!2d-3.1867538!3d55.9500241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c7858dfade59%3A0xe5fb7645a69f913a!2stheSpace%20on%20the%20Mile!5e0!3m2!1sen!2suk!4v1746449000000!5m2!1sen!2suk"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
@@ -48,7 +49,7 @@ export default () => `
           </div>
           <div class="venue-buttons">
             <a class="btn btn-primary" href="${copy.show.ticketUrl}" target="_blank" rel="noopener">Get Tickets</a>
-            <a class="btn btn-outline" href="https://www.google.com/maps/search/The+Space+on+the+Mile+Edinburgh" target="_blank" rel="noopener">Get Directions</a>
+            <a class="btn btn-outline" href="${links.venue.getDirections}" target="_blank" rel="noopener">Get Directions</a>
           </div>
         </div>
 

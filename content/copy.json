@@ -4,7 +4,7 @@
     "shortName": "FWAMP!",
     "company": "FWAMP! Theatre Company",
     "creators": "Abbie Freeston and Matthew Stanley",
-    "tagline": "A hilarious new musical comedy created by Abbie Freeston and Matthew Stanley, taking you on the rollercoaster that is love, loss, and being a constant disappointment to your parents.",
+    "tagline": "A hilarious new musical comedy created by Abbie Freeston and Matthew Stanley, taking you on the rollercoaster that is love, life, and being a constant disappointment to your parents.",
     "aboutCompany": "FWAMP Theatre Company is an innovative and unique theatre company, specialising in musical theatre comedy. Our team met while working on musical theatre projects as students at the University of Leeds, and now want to continue our passion in our professional work. The idea for Fantasy World Adventures Mega Park! came together from a conversation around how the world can be a bit bleak at times, and how important it is to create entertainment for entertainment's sake. Our show is silly, heartwarming and relatable for both British and global audiences - with storylines and songs for everyone.",
     "aboutShow": "Fantasy World Adventures Mega Park! follows Theme Park nepo baby Teddy Mega as he struggles with inheriting his family's legacy, navigating relationships and keeping a big secret from his mum. As he takes on the role of CEO, Teddy reveals his one true passion is to become the theme park's infamous mascot instead. FWAMP is hilariously shameless, with genres spanning RnB, disco and contemporary musical theatre, relatable and outlandish characters that showcase the rollercoaster that is love, life, and being a constant disappointment to your parents.",
     "genre": "New Writing, Musical Comedy",
@@ -17,6 +17,12 @@
     "ticketPrice": "£12.00",
     "ticketUrl": "https://tickets.thespaceuk.com/event/911:6660/",
     "festival": "Edinburgh Festival Fringe 2026"
+  },
+  "fundraiser": {
+    "date": "22 May 2026",
+    "shortDate": "22 May",
+    "venue": "Archive, Leeds",
+    "price": "£6.00"
   },
   "team": [
     {

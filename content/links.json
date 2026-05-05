@@ -58,13 +58,19 @@
   "reviews": [
     {
       "source": "Fairy Powered Productions",
-      "url": "https://fairypoweredproductions.com/fantasy-world-adventures-mega-park-review/"
+      "url": "https://fairypoweredproductions.com/fantasy-world-adventures-mega-park-review/",
+      "stars": 5,
+      "quote": "This show is sweet as candy and equally funny — a rollicking, raucous, random, rollercoaster of a musical. You won't regret it and you'll certainly give it a clap!"
     },
     {
       "source": "Leeds Living",
-      "url": "https://leedsliving.co.uk/art-culture/fantasy-world-adventures-mega-park-a-wonderous-rollercoaster-of-a-show/"
+      "url": "https://leedsliving.co.uk/art-culture/fantasy-world-adventures-mega-park-a-wonderous-rollercoaster-of-a-show/",
+      "quote": "A crazy adventure you wouldn't want to miss! Crude humour and an intriguing storyline — the uniqueness of FWAMP is something I would recommend to anyone."
     }
   ],
+  "venue": {
+    "getDirections": "https://maps.app.goo.gl/WsFkuuLV6jKRxsLP7"
+  },
   "support": {
     "ratdepot": {
       "title": "FWAMP! Fundraiser Night",

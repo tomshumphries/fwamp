@@ -1,5 +1,5 @@
 import './style.css'
-import logoClean from './assets/images/logos/logo-clean.png'
+import logoClean from './assets/images/logos/logo-transparent.png'
 import copy from '../content/copy.json'
 
 import topbar from './sections/topbar'

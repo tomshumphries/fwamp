@@ -1,4 +1,9 @@
-@font-face { font-family: 'Bobby Jones Soft'; src: url('./assets/fonts/bobby-jones-soft.otf') format('opentype'); font-weight: normal; font-display: swap; }
+@font-face {
+  font-family: 'Bobby Jones Soft';
+  src: url('./assets/fonts/bobby-jones-soft.otf') format('opentype');
+  font-weight: normal;
+  font-display: swap;
+}
 
 * {
   margin: 0;
@@ -22,7 +27,6 @@ html {
 
   /* Functional tokens */
   --bg: linear-gradient(135deg, var(--yellow), var(--peach));
-  --bg-solid: var(--yellow);
   --bg-card: rgba(255, 240, 220, 0.45);
   --bg-nav: var(--burgundy);
   --text: #3a2030;
@@ -33,10 +37,9 @@ html {
   --border: rgba(128, 0, 78, 0.15);
   --nav-width: 200px;
 
-  /* Fonts — swap in brand fonts when available */
   --font-heading: 'Bobby Jones Soft', 'Fredoka One', 'Baloo 2', system-ui, sans-serif;
-  --font-secondary: 'Bobby Jones Soft', 'Fredoka One', 'Baloo 2', system-ui, sans-serif;
-  --font-body: 'Bobby Jones Soft', 'Fredoka One', 'Baloo 2', system-ui, sans-serif;
+  --font-body: system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-secondary: var(--font-body);
 
   font: 20px/1.6 var(--font-body);
   color: var(--text);
@@ -80,19 +83,17 @@ img {
   padding: 0 32px;
   height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 .top-bar-events {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
-  pointer-events: auto;
+  padding: 0 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .top-bar-event {
@@ -130,9 +131,13 @@ img {
 }
 
 .top-bar-socials {
+  flex: 1;
   display: flex;
   gap: 12px;
   align-items: center;
+  justify-content: flex-start;
+  padding-right: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .top-bar-social {
@@ -152,9 +157,12 @@ img {
 }
 
 .top-bar-actions {
+  flex: 1;
   display: flex;
   gap: 8px;
   align-items: center;
+  justify-content: flex-end;
+  padding-left: 20px;
 }
 
 .top-bar-btn {
@@ -205,7 +213,6 @@ img {
 .nav-logo-img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
 }
 
 .nav-links {
@@ -407,10 +414,6 @@ section + section {
 .about-who p {
   line-height: 1.8;
   color: var(--text-muted);
-}
-
-.about-cta {
-  text-align: center;
 }
 
 /* Section headings */
@@ -1410,9 +1413,9 @@ section + section {
 }
 
 .team-bio {
-  font-size: 17px;
+  font-size: 14px;
   color: var(--text-muted);
-  line-height: 1.75;
+  line-height: 1.65;
   margin-top: 4px;
 }
 
@@ -1511,10 +1514,10 @@ footer .social-links {
   }
 
   .team-bio {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.55;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
@@ -1601,6 +1604,8 @@ footer .social-links {
 
   .main-content {
     padding-top: 46px;
+    margin-left: 0;
+    padding-bottom: 100px;
   }
 
   section, footer {
@@ -1631,11 +1636,6 @@ footer .social-links {
 
   .top-bar-tickets {
     padding: 4px 10px;
-  }
-
-  .main-content {
-    margin-left: 0;
-    padding-bottom: 100px;
   }
 
   section {
