@@ -2,10 +2,11 @@
 
 ## Fonts
 
-| Role | Font |
-|------|------|
-| Primary (headings, logo) | Bobby Jones Soft |
-| Body / tertiary | Gabriel Sans Condensed |
+| Role | Font | Status |
+|------|------|--------|
+| Primary (headings, logo) | Bobby Jones Soft | Loaded via `@font-face` |
+| Secondary | One Little Font | Not yet loaded — system font fallback |
+| Body | Gabriel Sans Condensed | Not yet loaded — system font fallback |
 
 ## Colours
 

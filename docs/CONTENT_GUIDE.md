@@ -8,7 +8,7 @@ Everything the site needs, what we have, and what's still missing.
 - [x] Full name: Fantasy World Adventures Mega Park! The Musical
 - [x] Company: FWAMP! Theatre Company
 - [x] Creators: Abbie Freeston and Matthew Stanley
-- [x] Tagline: "The rollercoaster that is love, loss, and being a constant disappointment to your parents"
+- [x] Tagline: "The rollercoaster that is love, life, and being a constant disappointment to your parents"
 - [x] Full description / synopsis
 - [x] Venue: theSpace on the Mile, Space 3, 80 High Street, Edinburgh EH1 1TH
 - [x] Dates: 17-29 August 2026
@@ -23,6 +23,8 @@ Everything the site needs, what we have, and what's still missing.
 - [x] 4 YouTube song clips (Welcome to FWAMP, Let's Parade, Maintenance Men, Man of the Hour)
 - [x] 1 official trailer
 - [x] 2 reviews (Fairy Powered Productions 5-star, Leeds Living)
+- [x] Fundraiser event details (date, venue, price — `content/copy.json`)
+- [x] Get Directions URL for venue
 - [x] GoFundMe link
 - [x] Sponsor form link
 
@@ -32,8 +34,8 @@ Everything the site needs, what we have, and what's still missing.
 - [x] All 60 available in "View All" lightbox gallery
 
 ### Logos (complete — `src/assets/images/logos/`)
-- [x] `logo-transparent.png` — transparent background (used in hero)
-- [x] `logo-clean.png` — solid peach background (used in side nav)
+- [x] `logo-transparent.png` — transparent background (used in hero + side nav)
+- [x] `logo-clean.png` — solid peach background
 - [x] `logo-full.png` — with confetti decorations
 
 ### Brand Guidelines (complete — `docs/BRAND_GUIDELINES.md`)
@@ -41,17 +43,18 @@ Everything the site needs, what we have, and what's still missing.
 - [x] Colours: pink, burgundy, blue, yellow, peach
 - [x] Background gradient: yellow → peach
 
-### Reviews (complete — quotes live in `src/sections/reviews.ts`)
+### Reviews (complete — quotes live in `content/links.json`)
 - [x] Fairy Powered Productions — 5 stars, quote extracted
-- [x] Leeds Living — quote extracted
+- [x] Leeds Living — quote extracted (no star rating)
 
 ## What's Still TBD
 
-- [ ] Custom web fonts (Bobby Jones Soft, One Little Font, Gabriel Sans Condensed) — currently using system fonts
+- [x] Bobby Jones Soft — loaded via `@font-face` in `style.css`
+- [ ] One Little Font, Gabriel Sans Condensed — still using system fonts as fallback
 - [ ] Show times (specific daily schedule if it varies)
 - [ ] Cast / crew list (if desired on site)
-- [ ] Favicon (currently none — could use logo)
-- [ ] Open Graph / social share image
+- [x] Favicon — 16px, 32px, 180px variants in `public/`
+- [x] Open Graph / social share image — `public/og-image.jpg`
 
 ## Content File Structure
 

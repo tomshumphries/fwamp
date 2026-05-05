@@ -5,7 +5,8 @@ import links from '../../content/links.json'
 export default () => `
   <section class="hero" id="hero">
     <div class="container">
-      <img class="hero-logo" src="${logo}" alt="FWAMP Logo" />
+      <h1 class="sr-only">FWAMP! — Fantasy World Adventures Mega Park! The Musical</h1>
+      <img class="hero-logo" src="${logo}" alt="FWAMP! — Fantasy World Adventures Mega Park! The Musical" />
       <p class="subtitle">The Musical</p>
       <p class="tagline">${copy.show.tagline}</p>
       <p class="hero-festival">${copy.show.festival} &bull; ${copy.show.dates}</p>

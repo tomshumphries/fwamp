@@ -16,8 +16,8 @@ fwamp/
 ├── .github/workflows/
 │   └── deploy.yml              # GitHub Pages deploy (builds on push to main)
 ├── content/                    # Content data (not code)
-│   ├── links.json              # All external URLs (socials, videos, reviews, support)
-│   └── copy.json               # All text content (show info, descriptions, copy)
+│   ├── links.json              # External URLs + review quotes (socials, videos, reviews, support)
+│   └── copy.json               # All text content (show info, fundraiser, descriptions, copy)
 ├── docs/
 │   ├── BRAND_GUIDELINES.md     # Fonts, colours, logo usage
 │   └── CONTENT_GUIDE.md        # What content we have and what's still needed
@@ -41,9 +41,11 @@ fwamp/
 │   │   ├── support.ts          # GoFundMe + Sponsor cards
 │   │   └── footer.ts           # Social links + copyright
 │   ├── main.ts                 # App entry — section ordering + nav setup
+│   ├── scroll.ts               # Keyboard navigation (arrow/page keys) for desktop scroll snap
 │   ├── style.css               # All styles
 │   └── vite-env.d.ts           # Type declarations for image imports
 ├── public/                     # Static files served as-is
+│   ├── og-image.jpg            # Open Graph social share image
 ├── index.html                  # HTML entry point
 ├── vite.config.ts              # Vite config (base path for GitHub Pages)
 └── CLAUDE.md                   # This file
@@ -57,7 +59,7 @@ Sections are ordered via an array in `main.ts` — reorder the array to reorder 
 The side nav auto-generates from this same array.
 
 ### Content/code separation
-All text copy lives in `content/copy.json`, all URLs in `content/links.json`.
+All text copy lives in `content/copy.json`. External URLs and review quotes live in `content/links.json`.
 Sections import from these JSON files — update content without touching component code.
 
 ### Gallery
@@ -69,7 +71,7 @@ Sections import from these JSON files — update content without touching compon
 
 - **Colours**: yellow `#ffde59`, peach `#ffb68a` (gradient bg), pink `#ff66c4`, burgundy `#80004e`, blue `#87b0e1`
 - **Fonts**: Bobby Jones Soft (primary), One Little Font (secondary), Gabriel Sans Condensed (body)
-- **Logo**: Three versions in `src/assets/images/logos/` — transparent, clean (solid bg), full (with confetti)
+- **Logo**: Three versions in `src/assets/images/logos/` — transparent (used in hero + nav), clean (solid bg), full (with confetti)
 - See `docs/BRAND_GUIDELINES.md` for full details
 
 ## Show Details
