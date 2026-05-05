@@ -447,6 +447,65 @@ section + section {
   font-family: var(--font-secondary);
 }
 
+/* FAQ */
+.faq {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.faq h3 {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  color: var(--burgundy);
+  margin-bottom: 12px;
+}
+
+.faq details {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq details:first-of-type {
+  border-top: 1px solid var(--border);
+}
+
+.faq summary {
+  padding: 14px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--burgundy);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: '+';
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--pink);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq details p {
+  padding: 0 0 16px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
 /* Trailer */
 .trailer-wrapper {
   position: relative;
