@@ -17,7 +17,7 @@ export default () => `
         <h3>Who We Are</h3>
         <p>${copy.show.aboutCompany}</p>
       </div>
-      <div class="faq">
+      <div class="faq sr-only">
         <h3>Frequently Asked Questions</h3>
         <details>
           <summary>Where is FWAMP performed?</summary>
