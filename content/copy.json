@@ -10,19 +10,28 @@
     "genre": "New Writing, Musical Comedy",
     "duration": "70 minutes",
     "ageRestriction": "16+",
-    "contentWarnings": ["Scenes of a sexual nature", "Strong language/swearing"],
-    "venue": "theSpace on the Mile, Space 3",
-    "venueAddress": "80 High Street, EH1 1TH, Edinburgh",
+    "contentWarnings": ["Scenes of a sexual nature", "Strong language/swearing"]
+  },
+  "fringeVenue": {
+    "name": "theSpace on the Mile, Space 3",
+    "address": "80 High Street, EH1 1TH, Edinburgh",
     "dates": "17-29 August 2026",
+    "shortDates": "17–29 Aug",
     "ticketPrice": "£12.00",
-    "ticketUrl": "https://tickets.thespaceuk.com/event/911:6660/",
     "festival": "Edinburgh Festival Fringe 2026"
   },
-  "fundraiser": {
-    "date": "22 May 2026",
-    "shortDate": "22 May",
-    "venue": "Archive, Leeds",
-    "price": "£6.00"
+  "support": {
+    "intro": "Every penny we raise goes straight into making the Fringe run happen, feeding and housing the cast for three weeks in Edinburgh, paying for venue hire and tech at theSpace on the Mile, getting the team and set up to Scotland, and the hundred-and-one other costs (posters, programmes, costumes, sound, late-night van hires…) that come with putting on a musical at the world's biggest arts festival. We're an independent company doing this off our own backs, so every donation, sponsorship and ticket bought genuinely makes the difference. Thank you for helping us get there."
+  },
+  "leedsVenue": {
+    "name": "Alec Clegg Studio",
+    "address": "stage@leeds, University of Leeds",
+    "dates": "Thu 30 & Fri 31 July 2026",
+    "shortDates": "30–31 Jul",
+    "time": "7:30pm",
+    "ticketPrice": "£12 / £10",
+    "whyTitle": "A Trial Run",
+    "whyBody": "We're putting on FWAMP! in Leeds as a trial run before we take it up to the Edinburgh Fringe, a chance to polish the show in front of an audience at the University where the team first met. Every penny we make at stage@leeds goes straight into the Fringe pot, so coming along genuinely helps us get the production to Scotland. It'll also be a brilliant night out at the theme park, with all the silliness, sparkle and questionable life choices you've come to expect. Thank you for backing us, we couldn't do it without your support."
   },
   "team": [
     {

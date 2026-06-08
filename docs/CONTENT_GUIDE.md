@@ -23,7 +23,7 @@ Everything the site needs, what we have, and what's still missing.
 - [x] 4 YouTube song clips (Welcome to FWAMP, Let's Parade, Maintenance Men, Man of the Hour)
 - [x] 1 official trailer
 - [x] 2 reviews (Fairy Powered Productions 5-star, Leeds Living)
-- [x] Fundraiser event details (date, venue, price — `content/copy.json`)
+- [x] Leeds preview show details (date, venue, time, price — `content/copy.json`)
 - [x] Get Directions URL for venue
 - [x] GoFundMe link
 - [x] Sponsor form link

@@ -1,6 +1,7 @@
 import './style.css'
 import logoClean from './assets/images/logos/logo-transparent.png'
 import copy from '../content/copy.json'
+import links from '../content/links.json'
 
 import topbar from './sections/topbar'
 import hero from './sections/hero'
@@ -11,7 +12,8 @@ import videos from './sections/videos'
 import gallery, { initGallery } from './sections/gallery'
 import { initScrollSnap } from './scroll'
 import reviews from './sections/reviews'
-import venue, { initVenue } from './sections/venue'
+import leeds from './sections/leeds'
+import fringe, { initFringe } from './sections/fringe'
 import support from './sections/support'
 import footer from './sections/footer'
 
@@ -24,7 +26,8 @@ const sections = [
   { id: 'videos', label: 'Videos', render: videos },
   { id: 'gallery', label: 'Gallery', render: gallery },
   { id: 'reviews', label: 'Reviews', render: reviews },
-  { id: 'venue', label: 'Venue', render: venue },
+  { id: 'leeds', label: 'Leeds', render: leeds },
+  { id: 'fringe', label: 'Fringe', render: fringe },
   { id: 'support', label: 'Support', render: support },
 ]
 
@@ -46,7 +49,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     ${sectionHtml}
     ${footer()}
   </main>
-  <a class="mobile-cta" href="${copy.show.ticketUrl}" target="_blank" rel="noopener">Get Tickets &mdash; ${copy.show.ticketPrice}</a>
+  <a class="mobile-cta" href="${links.fringeVenue.tickets}" target="_blank" rel="noopener">Get Tickets &mdash; ${copy.fringeVenue.ticketPrice}</a>
 `
 
 // Highlight active nav link on scroll
@@ -71,6 +74,6 @@ for (const el of sectionEls) {
 }
 
 initGallery()
-initVenue()
+initFringe()
 initTeam()
 initScrollSnap()

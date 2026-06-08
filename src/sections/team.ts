@@ -11,10 +11,10 @@ function memberCard(member: typeof copy.team[0]): string {
     <div class="team-card">
       <div class="team-photos">
         <div class="polaroid polaroid-back">
-          <img src="${photo(member.photo2)}" alt="${member.name}, ${member.role} — FWAMP! The Musical" loading="lazy" />
+          <img src="${photo(member.photo2)}" alt="${member.name}, ${member.role} FWAMP! The Musical" loading="lazy" />
         </div>
         <div class="polaroid polaroid-front">
-          <img src="${photo(member.photo1)}" alt="${member.name}, ${member.role} — FWAMP! The Musical" loading="lazy" />
+          <img src="${photo(member.photo1)}" alt="${member.name}, ${member.role} FWAMP! The Musical" loading="lazy" />
         </div>
       </div>
       <div class="team-info">

@@ -347,29 +347,6 @@ section + section {
   margin-right: auto;
 }
 
-.hero .hero-festival {
-  font-size: 18px;
-  color: var(--burgundy);
-  font-weight: 600;
-  margin-bottom: 5px;
-  letter-spacing: 0.5px;
-}
-
-.hero .hero-fundraiser {
-  font-size: 17px;
-  color: var(--text-muted);
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  margin-bottom: 20px;
-}
-
-.hero .cta-row {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 /* About */
 .about-synopsis {
   font-size: 20px;
@@ -709,6 +686,12 @@ section + section {
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   align-items: stretch;
+}
+
+.leeds-why-body {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--text);
 }
 
 .venue-card {
@@ -1218,7 +1201,7 @@ section + section {
 }
 
 .support-event-perks li::before {
-  content: '—';
+  content: '•';
   position: absolute;
   left: 0;
   color: var(--yellow);
@@ -1318,6 +1301,15 @@ section + section {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.2px;
+}
+
+.support-intro {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--text);
 }
 
 .support-cards {
@@ -1731,11 +1723,6 @@ footer .social-links {
 
   .hero .tagline {
     font-size: 18px;
-  }
-
-  .hero .cta-row .btn {
-    width: 100%;
-    justify-content: center;
   }
 
   .about-who {

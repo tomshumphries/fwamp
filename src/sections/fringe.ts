@@ -25,19 +25,19 @@ function buildCalendar(): string {
 }
 
 export default () => `
-  <section id="venue">
+  <section id="fringe">
     <div class="container">
       <div class="section-heading">
-        <h2>Venue &amp; Tickets</h2>
+        <h2>Edinburgh Fringe</h2>
       </div>
       <div class="venue-layout">
         <div class="venue-card">
-          <h3 class="venue-name">${copy.show.venue}</h3>
-          <p class="venue-address">${copy.show.venueAddress}</p>
+          <h3 class="venue-name">${copy.fringeVenue.name}</h3>
+          <p class="venue-address">${copy.fringeVenue.address}</p>
           <div class="venue-pills">
             <span class="venue-pill">${copy.show.duration}</span>
             <span class="venue-pill">${copy.show.ageRestriction}</span>
-            <span class="venue-pill">${copy.show.ticketPrice}</span>
+            <span class="venue-pill">${copy.fringeVenue.ticketPrice}</span>
           </div>
           <div class="venue-map">
             <iframe
@@ -48,8 +48,8 @@ export default () => `
             ></iframe>
           </div>
           <div class="venue-buttons">
-            <a class="btn btn-primary" href="${copy.show.ticketUrl}" target="_blank" rel="noopener">Get Tickets</a>
-            <a class="btn btn-outline" href="${links.venue.getDirections}" target="_blank" rel="noopener">Get Directions</a>
+            <a class="btn btn-primary" href="${links.fringeVenue.tickets}" target="_blank" rel="noopener">Get Tickets</a>
+            <a class="btn btn-outline" href="${links.fringeVenue.getDirections}" target="_blank" rel="noopener">Get Directions</a>
           </div>
         </div>
 
@@ -112,7 +112,7 @@ export default () => `
   </section>
 `
 
-export function initVenue() {
+export function initFringe() {
   let arrival: string | null = null
   let departure: string | null = null
   let stepperCount = 5

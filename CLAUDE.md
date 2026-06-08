@@ -37,7 +37,8 @@ fwamp/
 │   │   ├── videos.ts           # 2x2 grid of embedded song clips
 │   │   ├── gallery.ts          # 3x3 photo preview + "View All" lightbox (60 photos)
 │   │   ├── reviews.ts          # Review cards with quotes
-│   │   ├── venue.ts            # Venue info + Google Maps embed
+│   │   ├── leeds.ts            # Leeds preview info card + map + "trial run" copy
+│   │   ├── fringe.ts           # Edinburgh Fringe venue info + map + Plan Your Visit planner
 │   │   ├── support.ts          # GoFundMe + Sponsor cards
 │   │   └── footer.ts           # Social links + copyright
 │   ├── main.ts                 # App entry — section ordering + nav setup

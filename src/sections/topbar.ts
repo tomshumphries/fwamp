@@ -20,14 +20,14 @@ export default () => `
         ${socialIcons}
       </div>
       <div class="top-bar-events">
-        <a href="${links.support.ratdepot.url}" target="_blank" rel="noopener" class="top-bar-event">
-          <span class="top-bar-event-date">${copy.fundraiser.shortDate}</span>
+        <a href="#leeds" class="top-bar-event">
+          <span class="top-bar-event-date">${copy.leedsVenue.shortDates}</span>
           <span class="top-bar-event-dot">·</span>
-          <span class="top-bar-event-label">${copy.fundraiser.venue}</span>
+          <span class="top-bar-event-label">Leeds Preview</span>
         </a>
         <span class="top-bar-event-divider"></span>
-        <a href="#venue" class="top-bar-event">
-          <span class="top-bar-event-date">17–29 Aug</span>
+        <a href="#fringe" class="top-bar-event">
+          <span class="top-bar-event-date">${copy.fringeVenue.shortDates}</span>
           <span class="top-bar-event-dot">·</span>
           <span class="top-bar-event-label">Edinburgh Fringe</span>
         </a>
@@ -35,7 +35,7 @@ export default () => `
       <div class="top-bar-actions">
         <a href="${links.support.gofundme.url}" target="_blank" rel="noopener" class="top-bar-btn">Donate</a>
         <a href="${links.support.sponsor.url}" target="_blank" rel="noopener" class="top-bar-btn">Sponsor</a>
-        <a href="${copy.show.ticketUrl}" target="_blank" rel="noopener" class="top-bar-btn top-bar-tickets">Tickets</a>
+        <a href="${links.fringeVenue.tickets}" target="_blank" rel="noopener" class="top-bar-btn top-bar-tickets">Tickets</a>
       </div>
     </div>
   </div>
