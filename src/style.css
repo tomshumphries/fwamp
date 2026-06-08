@@ -847,43 +847,6 @@ section + section {
   min-height: 20px;
 }
 
-.planner-people {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin: 20px 0 24px;
-}
-
-.planner-person {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 19px;
-  font-weight: 700;
-  border: 1.5px solid var(--burgundy);
-  background: transparent;
-  color: var(--burgundy);
-  cursor: pointer;
-  transition: background 0.15s, color 0.15s, transform 0.1s, box-shadow 0.15s;
-}
-
-.planner-person:hover {
-  background: var(--burgundy);
-  color: var(--white);
-  transform: scale(1.1);
-}
-
-.planner-person.active {
-  background: var(--pink);
-  border-color: var(--pink);
-  color: var(--white);
-  transform: scale(1.1);
-  box-shadow: 0 2px 8px rgba(255, 102, 196, 0.4);
-}
-
 .planner-summary {
   font-size: 16px;
   color: var(--text-muted);

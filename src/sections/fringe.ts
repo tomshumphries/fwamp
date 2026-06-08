@@ -69,14 +69,10 @@ export default () => `
 
           <div class="planner-step" id="planner-step-2">
             <p class="planner-prompt">How many people?</p>
-            <div class="planner-people">
-              ${[1, 2, 3, 4].map(n => `<button class="planner-person" data-count="${n}">${n}</button>`).join('')}
-              <button class="planner-person planner-person-more" id="planner-person-more">5+</button>
-            </div>
-            <div class="planner-stepper" id="planner-stepper" hidden>
+            <div class="planner-stepper" id="planner-stepper">
               <div class="planner-stepper-row">
                 <button class="planner-stepper-btn" id="planner-stepper-dec">&minus;</button>
-                <span class="planner-stepper-val" id="planner-stepper-val">5</span>
+                <span class="planner-stepper-val" id="planner-stepper-val">2</span>
                 <button class="planner-stepper-btn" id="planner-stepper-inc">+</button>
               </div>
               <button class="planner-stepper-confirm" id="planner-stepper-confirm">Confirm &rarr;</button>
@@ -115,12 +111,11 @@ export default () => `
 export function initFringe() {
   let arrival: string | null = null
   let departure: string | null = null
-  let stepperCount = 5
+  let stepperCount = 2
 
   const steps = [1, 2, 3].map(n => document.getElementById(`planner-step-${n}`)!)
   const dots = document.querySelectorAll<HTMLElement>('.planner-dot')
   const hint = document.getElementById('planner-hint')!
-  const stepperEl = document.getElementById('planner-stepper')!
   const stepperValEl = document.getElementById('planner-stepper-val')!
   const stepperDecEl = document.getElementById('planner-stepper-dec') as HTMLButtonElement
   const stepperIncEl = document.getElementById('planner-stepper-inc') as HTMLButtonElement
@@ -197,32 +192,15 @@ export function initFringe() {
     })
   })
 
-  // Step 2 — 1–4 instant circles
-  document.querySelectorAll<HTMLButtonElement>('.planner-person:not(#planner-person-more)').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.planner-person').forEach(b => b.classList.remove('active'))
-      stepperEl.setAttribute('hidden', '')
-      btn.classList.add('active')
-      applyPeople(parseInt(btn.dataset.count!))
-    })
-  })
-
-  // Step 2 — 5+ circle opens stepper
   function refreshStepper() {
     stepperValEl.textContent = String(stepperCount)
-    stepperDecEl.disabled = stepperCount <= 5
+    stepperDecEl.disabled = stepperCount <= 1
   }
-
-  document.getElementById('planner-person-more')?.addEventListener('click', () => {
-    document.querySelectorAll('.planner-person').forEach(b => b.classList.remove('active'))
-    document.getElementById('planner-person-more')!.classList.add('active')
-    stepperCount = 5
-    refreshStepper()
-    stepperEl.removeAttribute('hidden')
-  })
+  // ensure stepper initial state
+  refreshStepper()
 
   stepperDecEl.addEventListener('click', () => {
-    if (stepperCount > 5) { stepperCount--; refreshStepper() }
+    if (stepperCount > 1) { stepperCount--; refreshStepper() }
   })
 
   stepperIncEl.addEventListener('click', () => {
